@@ -5,5 +5,27 @@ body{
 }
 form{
 	max-width: 25em;
-	margin: 1em auto;
+	margin: 4em auto;
+	position: relative;
+}
+form .input-group-text{
+    background: #F97300;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    padding: 1em;
+    color: #fff;
+    position: absolute;
+    right: -18px;
+    top: 39px;
+    cursor: pointer;
+}
+form .form-control{
+	height: 3em;
+}
+form .form-control:focus{
+	box-shadow: 0;
+}
+.data{
+
 }
