@@ -1,5 +1,5 @@
 <div class="container">
-	<form #todoForm= "ngForm"(submit)="todoSubmit(todoForm.value)">
+	<form #todoForm= "ngForm"(submit)="todoSubmit(todoForm.value); todoForm.resetForm()" >
 		<div class="form-group">
 		<h1 class="text-center ">Todo App</h1>
 			<div class="input-group-prepend">

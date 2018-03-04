@@ -28,6 +28,7 @@ import { Component,trigger,animate,style,transition,keyframes } from '@angular/c
 export class AppComponent {
   todoArray=[];
   todo;
+  //todoForm: new FormGroup()
 
 
    addTodo(value){
@@ -47,7 +48,7 @@ export class AppComponent {
   // submit Form
   todoSubmit(value:any){
     this.todoArray.push(value.todo)
-     value.todo=""
+     //this.todoForm.reset()
   }
  
 }
