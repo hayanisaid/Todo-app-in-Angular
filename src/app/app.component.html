@@ -1,15 +1,16 @@
 <div class="container">
-	<form>
+	<form #todoForm= "ngForm"(submit)="todoSubmit(todoForm.value)">
 		<div class="form-group">
-		<h1 class="text-center text-primary">Todo App</h1>
+		<h1 class="text-center ">Todo App</h1>
 			<div class="input-group-prepend">
-			    <input type="text" #todo class="form-control" placeholder="Add Todo" name="todo" ngModel>
-				<span class="input-group-text" (click)="addTodo(todo.value)">Add</span>
+			    <input type="text" #todo  class="form-control" placeholder="Add Todo" name="todo" ngModel>
+				<span class="input-group-text" (click)="addTodo(todo.value)">
+				<i class="material-icons">add</i></span>
 			</div>
 		</div>
 		<div class="data">
-		<ul class="list-instyled">
-			<li *ngFor="let todo of todos">{{todo}}</li>
+		<ul class="list-unstyled">
+			<li [@moveInLeft]  *ngFor="let todo of todoArray">{{todo}} <i (click)="deleteItem(todo)" class="material-icons">delete</i></li>
 		</ul>
 	</div>
 	</form>
