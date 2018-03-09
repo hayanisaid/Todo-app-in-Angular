@@ -32,8 +32,13 @@ export class AppComponent {
 
 
    addTodo(value){
-    this.todoArray.push(value)
-    //console.log(this.todos)
+    if(value!==""){
+     this.todoArray.push(value)
+    //console.log(this.todos) 
+  }else{
+    alert('Field required **')
+  }
+    
   }
 
   /*delete item*/
@@ -47,8 +52,13 @@ export class AppComponent {
 
   // submit Form
   todoSubmit(value:any){
+     if(value!==""){
     this.todoArray.push(value.todo)
      //this.todoForm.reset()
+    }else{
+      alert('Field required **')
+    }
+    
   }
  
 }
